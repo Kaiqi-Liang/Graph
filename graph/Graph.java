@@ -3,7 +3,6 @@ package graph;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -121,10 +120,6 @@ public class Graph<E> {
      */
     private Vertex<E> getVertex(Vertex<?> vertex) {
         return getKeys().stream().filter(v -> v.equals(vertex)).findFirst().orElse(null);
-    }
-
-    private Optional<?> findFist(Set<?> collection, Object element) {
-        return collection.stream().filter(e -> e.equals(element)).findFirst();
     }
 
 }
